@@ -1,0 +1,119 @@
+.booking-widget {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #dfe3e8;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.07);
+}
+
+.booking-widget-price {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin-bottom: 22px;
+}
+
+.booking-widget-price strong {
+  color: #172033;
+  font-size: 1.65rem;
+  letter-spacing: -0.03em;
+}
+
+.booking-widget-price span {
+  color: #667085;
+  font-size: 0.9rem;
+}
+
+.booking-widget-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking-widget-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.booking-widget-field label {
+  color: #344054;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.booking-widget-field input,
+.booking-widget-field select {
+  width: 100%;
+  min-height: 46px;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #172033;
+  font: inherit;
+  outline: none;
+}
+
+.booking-widget-field input:focus,
+.booking-widget-field select:focus {
+  border-color: #172033;
+}
+
+.booking-widget-button {
+  width: 100%;
+  min-height: 50px;
+  margin-top: 20px;
+  border: 0;
+  border-radius: 9px;
+  background: #172033;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.booking-widget-button:hover {
+  transform: translateY(-1px);
+  opacity: 0.93;
+}
+
+.booking-widget-note {
+  margin: 12px 0 0;
+  color: #98a2b3;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+@media (max-width: 950px) {
+  .booking-widget {
+    padding: 22px;
+  }
+
+  .booking-widget-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .booking-widget-field:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .booking-widget {
+    padding: 20px;
+  }
+
+  .booking-widget-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-widget-field:last-child {
+    grid-column: auto;
+  }
+}

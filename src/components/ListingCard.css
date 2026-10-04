@@ -1,0 +1,272 @@
+/* =========================================================
+   LISTING CARD
+   ========================================================= */
+
+.listing-card {
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.listing-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #cbd5e1;
+
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.09);
+}
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.listing-image-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 250px;
+
+  overflow: hidden;
+
+  background: #e2e8f0;
+}
+
+.listing-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.listing-card:hover .listing-image {
+  transform: scale(1.04);
+}
+
+/* =========================================================
+   WISHLIST BUTTON
+   ========================================================= */
+
+.listing-wishlist {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  color: #334155;
+
+  font-size: 21px;
+
+  box-shadow: 0 5px 15px rgba(15, 23, 42, 0.12);
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.listing-wishlist:hover {
+  background: #ffffff;
+
+  color: #2563eb;
+
+  transform: scale(1.05);
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.listing-content {
+  padding: 20px;
+}
+
+.listing-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 12px;
+}
+
+.listing-top h3 {
+  min-width: 0;
+
+  color: #0f172a;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.listing-rating {
+  flex-shrink: 0;
+
+  color: #0f172a;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.listing-location {
+  margin-top: 7px;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+.listing-reviews {
+  margin-top: 3px;
+
+  color: #94a3b8;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   BOTTOM
+   ========================================================= */
+
+.listing-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 18px;
+
+  padding-top: 16px;
+
+  border-top: 1px solid #f1f5f9;
+}
+
+.listing-bottom p {
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+.listing-bottom strong {
+  color: #0f172a;
+
+  font-size: 20px;
+}
+
+.listing-bottom span {
+  color: #94a3b8;
+
+  font-size: 12px;
+}
+
+.listing-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 15px;
+
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.listing-button:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .listing-image-wrapper {
+    height: 230px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .listing-image-wrapper {
+    height: 240px;
+  }
+
+  .listing-content {
+    padding: 18px;
+  }
+
+  .listing-top h3 {
+    font-size: 17px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+  .listing-image-wrapper {
+    height: 220px;
+  }
+
+  .listing-content {
+    padding: 16px;
+  }
+
+  .listing-top {
+    gap: 8px;
+  }
+
+  .listing-top h3 {
+    font-size: 16px;
+  }
+
+  .listing-bottom strong {
+    font-size: 18px;
+  }
+
+  .listing-button {
+    padding: 8px 13px;
+  }
+}

@@ -1,0 +1,700 @@
+/* =========================================================
+   SETTINGS PAGE
+   ========================================================= */
+
+.settings-page {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+
+  padding: 70px 0 20px;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.settings-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 38px;
+}
+
+.settings-label {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  color: #2563eb;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.settings-header h1 {
+  margin-bottom: 8px;
+
+  color: #0f172a;
+
+  font-size: clamp(32px, 4vw, 44px);
+  line-height: 1.15;
+
+  letter-spacing: -1px;
+}
+
+.settings-header p {
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+.profile-settings-button {
+  flex-shrink: 0;
+
+  padding: 12px 19px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  border-radius: 9px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: background 0.2s ease;
+}
+
+.profile-settings-button:hover {
+  background: #1d4ed8;
+}
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+
+.settings-layout {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 320px;
+
+  gap: 25px;
+
+  align-items: start;
+}
+
+.settings-main {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.settings-sidebar {
+  position: sticky;
+  top: 100px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+/* =========================================================
+   SETTINGS CARD
+   ========================================================= */
+
+.settings-card {
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+}
+
+.settings-card-heading {
+  margin-bottom: 25px;
+}
+
+.settings-card-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #2563eb;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+}
+
+.settings-card-heading h2 {
+  margin-bottom: 5px;
+
+  color: #0f172a;
+
+  font-size: 20px;
+}
+
+.settings-card-heading p {
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.settings-form-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+.settings-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.settings-field label {
+  color: #334155;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.settings-field select {
+  width: 100%;
+
+  padding: 12px 13px;
+
+  background: #ffffff;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+
+  color: #334155;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: border-color 0.2s ease;
+}
+
+.settings-field select:focus {
+  border-color: #2563eb;
+}
+
+/* =========================================================
+   NOTIFICATIONS
+   ========================================================= */
+
+.notification-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 18px 0;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+.notification-item:first-child {
+  padding-top: 0;
+
+  border-top: none;
+}
+
+.notification-item:last-child {
+  padding-bottom: 0;
+}
+
+.notification-item strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #0f172a;
+
+  font-size: 14px;
+}
+
+.notification-item div:first-child span {
+  display: block;
+
+  max-width: 600px;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   TOGGLE
+   ========================================================= */
+
+.toggle {
+  position: relative;
+
+  width: 46px;
+  height: 25px;
+
+  flex-shrink: 0;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #cbd5e1;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.toggle span {
+  position: absolute;
+
+  top: 3px;
+  left: 3px;
+
+  width: 19px;
+  height: 19px;
+
+  background: #ffffff;
+
+  border-radius: 50%;
+
+  transition: transform 0.2s ease;
+}
+
+.toggle.active {
+  background: #2563eb;
+}
+
+.toggle.active span {
+  transform: translateX(21px);
+}
+
+/* =========================================================
+   SECURITY
+   ========================================================= */
+
+.security-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.security-item {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 17px 0;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+.security-item:first-child {
+  border-top: none;
+
+  padding-top: 0;
+}
+
+.security-item:last-child {
+  padding-bottom: 0;
+}
+
+.security-icon {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f1f5f9;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+}
+
+.security-info {
+  flex: 1;
+}
+
+.security-info strong {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #0f172a;
+
+  font-size: 14px;
+}
+
+.security-info span {
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+.security-action {
+  padding: 8px 13px;
+
+  background: #f1f5f9;
+  color: #334155;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  transition: background 0.2s ease;
+}
+
+.security-action:hover {
+  background: #e2e8f0;
+}
+
+.verified-badge {
+  padding: 5px 9px;
+
+  background: #dcfce7;
+  color: #166534;
+
+  border-radius: 999px;
+
+  font-size: 11px !important;
+  font-weight: 700;
+}
+
+/* =========================================================
+   ACCOUNT ACTIONS
+   ========================================================= */
+
+.danger-card {
+  border-color: #e2e8f0;
+}
+
+.danger-label {
+  color: #dc2626;
+}
+
+.account-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+.logout-button,
+.delete-account-button {
+  padding: 10px 15px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.logout-button {
+  background: #f1f5f9;
+  color: #334155;
+
+  border: 1px solid #e2e8f0;
+}
+
+.logout-button:hover {
+  background: #e2e8f0;
+}
+
+.delete-account-button {
+  background: #ffffff;
+  color: #dc2626;
+
+  border: 1px solid #fecaca;
+}
+
+.delete-account-button:hover {
+  background: #fef2f2;
+}
+
+/* =========================================================
+   SIDEBAR PROFILE
+   ========================================================= */
+
+.settings-sidebar-card {
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+
+  text-align: center;
+}
+
+.settings-user-avatar {
+  width: 75px;
+  height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 15px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  border-radius: 50%;
+
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.settings-sidebar-card h2 {
+  margin-bottom: 3px;
+
+  color: #0f172a;
+
+  font-size: 20px;
+}
+
+.settings-sidebar-card p {
+  margin-bottom: 7px;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+.settings-sidebar-card > span {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+}
+
+.sidebar-profile-link {
+  display: block;
+
+  padding: 10px;
+
+  background: #f1f5f9;
+  color: #334155;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: background 0.2s ease;
+}
+
+.sidebar-profile-link:hover {
+  background: #e2e8f0;
+}
+
+/* =========================================================
+   SIDEBAR HELP
+   ========================================================= */
+
+.settings-help-card {
+  padding: 25px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+}
+
+.settings-help-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 14px;
+
+  background: #dbeafe;
+  color: #2563eb;
+
+  border-radius: 50%;
+
+  font-weight: 700;
+}
+
+.settings-help-card h2 {
+  margin-bottom: 6px;
+
+  color: #0f172a;
+
+  font-size: 18px;
+}
+
+.settings-help-card p {
+  margin-bottom: 14px;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+.settings-help-card a {
+  color: #2563eb;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.settings-help-card a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-sidebar {
+    position: static;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .settings-page {
+    width: min(92%, 500px);
+
+    padding: 45px 0 10px;
+  }
+
+  .settings-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+  }
+
+  .settings-header h1 {
+    font-size: 32px;
+  }
+
+  .profile-settings-button {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .settings-card {
+    padding: 21px;
+  }
+
+  .settings-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .notification-item {
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .notification-item div:first-child {
+    flex: 1;
+  }
+
+  .security-item {
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+  }
+
+  .security-info {
+    min-width: 150px;
+  }
+
+  .security-action,
+  .verified-badge {
+    margin-left: 53px;
+  }
+
+  .account-actions {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+  .logout-button,
+  .delete-account-button {
+    width: 100%;
+  }
+
+  .settings-sidebar {
+    display: flex;
+  }
+}

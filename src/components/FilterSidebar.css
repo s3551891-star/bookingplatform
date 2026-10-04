@@ -1,0 +1,156 @@
+.filter-sidebar {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e7e9ed;
+  border-radius: 14px;
+}
+
+.filter-sidebar-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #e7e9ed;
+}
+
+.filter-sidebar-label {
+  display: block;
+  margin-bottom: 7px;
+  color: #98a2b3;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.filter-sidebar-header h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 1.05rem;
+}
+
+.filter-clear-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #667085;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter-clear-button:hover {
+  color: #172033;
+}
+
+.filter-section {
+  padding: 22px 0;
+  border-bottom: 1px solid #e7e9ed;
+}
+
+.filter-section:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.filter-section h3 {
+  margin: 0 0 15px;
+  color: #172033;
+  font-size: 0.9rem;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: #475467;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.filter-option:last-child {
+  margin-bottom: 0;
+}
+
+.filter-option input {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  accent-color: #172033;
+  cursor: pointer;
+}
+
+.filter-price-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.filter-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-input-group label {
+  color: #98a2b3;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.filter-input-group input {
+  width: 100%;
+  min-height: 42px;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border: 1px solid #dfe3e8;
+  border-radius: 7px;
+  outline: none;
+  color: #172033;
+  font: inherit;
+  font-size: 0.82rem;
+}
+
+.filter-input-group input:focus {
+  border-color: #172033;
+}
+
+.filter-stars {
+  color: #172033;
+}
+
+.clear-rating {
+  margin-top: 8px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #667085;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.clear-rating:hover {
+  color: #172033;
+}
+
+@media (max-width: 950px) {
+  .filter-sidebar {
+    padding: 20px;
+  }
+
+  .filter-section {
+    padding: 18px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .filter-sidebar {
+    padding: 18px;
+  }
+
+  .filter-price-grid {
+    grid-template-columns: 1fr;
+  }
+}
